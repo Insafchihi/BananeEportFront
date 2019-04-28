@@ -1,0 +1,22 @@
+<form (ngSubmit)="onSubmit()">
+
+  <div class="col-lg-6 form-group">
+
+
+    <input name="Quantite" placeholder="Quantite" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Quantite'" class="common-input mb-20 form-control" required="" type="number" [(ngModel)]="commande.quantite" #box (blur)="update(box.value)"><br>
+
+    <input name="date" placeholder="Date Livraison" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Date Livraison'" class="common-input mb-20 form-control" required="" type="date" [(ngModel)]="commande.dateLivraison" #boxA (blur)="verifier(boxA.value)"><br>
+    <input name="Prix" placeholder="Prix" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Prix '" class="common-input mb-20 form-control" required="" type="number" [(ngModel)]="commande.prix"> <br>
+    <select name="Destinataire"  class="form-control input-sm maxWidthInput ui-select"
+            (change)="OndistinataireSelect(commande.destinataire)" [(ngModel)]= commande.destinataire >
+      <option *ngFor='let item of destinataires ' [ngValue]='item'>{{item.nom}}
+      </option>
+    </select>
+
+<div><p>{{messagedate}} {{message}}</p></div>
+
+    <input type="submit" value="Save" class="primary-btn">
+
+  </div>
+
+</form>

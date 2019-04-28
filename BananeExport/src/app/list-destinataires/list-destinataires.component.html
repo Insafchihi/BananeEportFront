@@ -1,0 +1,5 @@
+<table border="1px">
+<tr><td>Nom</td><td>Ville</td><td>Pays</td><td>Adresse</td><td>Voir commande</td></tr>
+<tr *ngFor='let item of destinataires '><td >{{item.nom}}</td><td>{{item.pays}}</td>
+<td>{{item.ville}}</td><td>{{item.adresse}}</td><td><button  value="{{item.id}}" #box (click)="OnClick(box.value)"> Commandes </button></td></tr>
+</table>

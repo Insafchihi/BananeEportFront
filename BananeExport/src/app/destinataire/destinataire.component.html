@@ -1,0 +1,20 @@
+<form (ngSubmit)="onSubmit()">
+
+  <div class="col-lg-6 form-group">
+
+
+    <input name="Name" placeholder="Name" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Nom'" class="common-input mb-20 form-control" required="" type="text" [(ngModel)]="destinataire.nom"><br>
+
+    <input name="Adresse" placeholder="Adresse" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Adresse'" class="common-input mb-20 form-control" required="" type="text" [(ngModel)]="destinataire.adresse"><br>
+    <input name="Code" placeholder="Code Postal" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Code Postal '" class="common-input mb-20 form-control" required="" type="number" [(ngModel)]="destinataire.codePostal"> <br>
+    <input name="ville" placeholder="ville" onfocus="this.placeholder = ''" onblur="this.placeholder = 'ville'" class="common-input mb-20 form-control" required="" type="text" [(ngModel)]="destinataire.ville"> <br>
+    <input name="pays" placeholder="pays" onfocus="this.placeholder = ''" onblur="this.placeholder = 'pays'" class="common-input mb-20 form-control" required="" type="text" [(ngModel)]="destinataire.pays"> <br>
+
+
+
+    <input type="submit" value="Save" class="primary-btn">
+
+  </div>
+
+</form>
+
